@@ -30,17 +30,19 @@
 				</div>
 				<br  />
 				<div class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;喵喵，狗狗爱你！！</div>
+				<br  />
+				<div class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;2020年2月25日，我们结束了500天相恋的日子，我想念你</div>
 			</div>
 			<div id="loveHeart">
 				<canvas id="garden"></canvas>
 				<div id="words">
 					<div id="messages">
-						小仙女老婆，我们已经相爱了
+						小仙女老婆，我们一共相爱了
 						<div id="elapseClock"></div>
 					</div>
-					<div id="loveu">
-						&nbsp;&nbsp;&nbsp;&nbsp;此生独爱你一人<br/>
-						<div class="signature">狗狗</div>
+					<div id="loveu" style="margin-left: 80px;">
+						&nbsp;&nbsp;&nbsp;&nbsp;即使结束了，你也是我生命中无法忘怀的女人<br/>
+						<!-- <div class="signature">狗狗</div> -->
 					</div>
 				</div>
 			</div>
@@ -71,12 +73,14 @@
 		} else {
 			setTimeout(function () {
 				startHeartAnimation();
-			}, 5000);
+			}, 50);
 
-			timeElapse(together);
-			setInterval(function () {
-				timeElapse(together);
-			}, 500);
+			var a = '<span class="digit">' + 500 + '</span> days <span class="digit">' + 23 + '</span> hours <span class="digit">' + 23 + '</span> minutes <span class="digit">' + 23 + "</span> seconds";
+    		$("#elapseClock").html(a)
+			//timeElapse(together);
+			//setInterval(function () {
+			//	timeElapse(together);
+			//}, 500);
 
 			adjustCodePosition();
 			$("#code").typewriter();
