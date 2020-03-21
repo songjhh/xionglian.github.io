@@ -31,17 +31,18 @@
 				<br  />
 				<div class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;喵喵，狗狗爱你！！</div>
 				<br  />
-				<div class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;2020年2月25日，我们结束了500天相恋的日子，我想念你</div>
+				<div class="keyword">&nbsp;&nbsp;&nbsp;&nbsp;2020年2月25日，我们结束了500天相恋的日子，越子，你要好好的</div>
 			</div>
 			<div id="loveHeart">
 				<canvas id="garden"></canvas>
 				<div id="words">
 					<div id="messages">
-						小仙女老婆，我们一共相爱了
+						越子，我们一共相爱了
 						<div id="elapseClock"></div>
 					</div>
 					<div id="loveu" style="margin-left: 80px;">
-						&nbsp;&nbsp;&nbsp;&nbsp;即使结束了，你也是我生命中无法忘怀的女人<br/>
+						<div id="birthday"></div>
+						
 						<!-- <div class="signature">狗狗</div> -->
 					</div>
 				</div>
@@ -76,11 +77,23 @@
 			}, 50);
 
 			var a = '<span class="digit">' + 500 + '</span> days <span class="digit">' + 23 + '</span> hours <span class="digit">' + 23 + '</span> minutes <span class="digit">' + 23 + "</span> seconds";
-    		$("#elapseClock").html(a)
+			$("#elapseClock").html(a)
+
 			//timeElapse(together);
 			//setInterval(function () {
 			//	timeElapse(together);
 			//}, 500);
+
+			var date = new Date();
+			var year = date.getFullYear();
+			var month = date.getMonth();
+			var day = date.getDate();
+			if (year == 2020 && month == 3 && day == 5) {
+				var message = "&nbsp;&nbsp;&nbsp;&nbsp;越子，生日快乐！<br/> &nbsp;&nbsp;&nbsp;&nbsp;希望你能够幸福！！<br/>";
+			} else {
+				var message = "&nbsp;&nbsp;&nbsp;&nbsp;即使结束了，你也是我生命中无法忘怀的女人<br/>";
+			}
+			$("#birthday").html(message);
 
 			adjustCodePosition();
 			$("#code").typewriter();
